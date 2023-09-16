@@ -1,0 +1,138 @@
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: "Kumbh Sans";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.accordion-content {
+    transition: 0.5s ease max-height;
+    max-height: 0;
+    overflow: hidden;
+    color: hsl(240, 6%, 50%);
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.arrow {
+    margin-left: auto;
+    color: hsl(14, 88%, 65%);
+}
+
+/* colors */
+h1, .active-title h4 {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+h4 {
+    color: hsl(237, 12%, 33%);
+    font-weight: 400; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    width: fit-content;
+}
+
+.main {
+    background: hsl(0, 0%, 100%);
+    border-radius: 16px;
+}
+
+/* mobile */
+@media screen and (max-width: 866px) {
+    .main {
+        max-width: 327px;
+        padding-inline: 2.5rem;
+        padding-bottom: 4rem;
+    }
+
+    .section-img img {
+        display: none;
+    }
+
+    .section-img {
+        background: url("images/illustration-woman-online-mobile.svg");
+        width: 237px;
+        height: 180px;
+        position: absolute;
+        top: -227px;
+        left: 18px;
+    }
+
+    .section-img, .section:nth-child(2) h1 {
+        margin-inline: auto;
+    }
+
+    .section:nth-child(1) {
+        position: relative;
+        margin-top: 10rem;
+    }
+
+    .section:nth-child(2) h1 {
+        margin-bottom: 1.25rem;
+    }
+
+    h4 {
+        margin-block: 1.25rem;
+        font-size: 1.1rem;
+    }
+
+    .accordion-content p {
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 867px) {
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-block: 4rem;
+        max-width: 920px;
+        position: relative;
+    }
+
+    .section-img {
+        overflow: hidden;
+    }
+
+    .img1 {
+        width: fit-content;
+        position: relative;
+        left: -75px;
+    }
+
+    .img2 {
+        position: absolute;
+        top: 175px;
+        left: -105px;
+    }
+
+    .accordion {
+        margin-top: 2rem;
+        max-width: 352px;
+    }
+
+    h4 {
+        margin-top: 1.25rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+    }
+
+    .accordion-content p {
+        padding-bottom: 1.5rem;
+    }
+}
